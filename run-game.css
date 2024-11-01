@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: rgb(1, 38, 1);
+}
+
+.container{
+    background: url(Run-game-images/forest1.gif) center no-repeat;
+    position: relative;
+    top: 25%;
+    left: 30%;
+    width: 100vh;
+}
+.container p{
+    color: #fff;
+    font-size: 1.3rem;
+}
+.jumpContainer{
+    display: none;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(9, 9, 249, 0.4);
+}
+.game{
+    width: 500px;
+    height: 200px;
+    border-bottom: 3px solid #fff;
+    margin: auto;
+}
+.hero{
+    width: 20px;
+    height: 50px;
+    position: relative;
+    top: 150px;
+    left: 20px;
+    z-index: 1;
+}
+
+.hero img{
+    width: 50px;
+    height: 50px;
+}
+.animate {
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{
+        top: 150px;
+    }
+    30%{
+        top: 100px;
+    }
+    60%{
+        top: 60px;
+    }
+    70%{
+        top: 100px;
+    }
+    100%{
+        top: 150px;
+    }
+}
+
+.vilan{
+    width: 20px;
+    height: 10px;
+    position: relative;
+    top: 110px;
+    left: 450px;
+    /* animation: move 1s infinite linear; */
+    z-index: 1;
+}
+.vilan img{
+    width: 60px;
+}
+
+@keyframes move{
+    0%{
+        left: 480px;
+    }
+    30%{
+        left: 350px;
+    }
+    55%{
+        left: 200px;
+    }
+    75%{
+        left: 100px;
+    }
+    90%{
+        left: 20px;
+    }
+    100%{
+        left: -20px;
+    }
+}
+
+@media  only screen and (max-width:650px){
+    
+.jumpContainer{
+    position: absolute;
+    top: 60%;
+    background: white;
+    width: 90%;
+    left: 6%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+.jumpContainer button{
+    background: blue;
+    padding: 12px 20px;
+    border: blue;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+}
+.container{
+    background: url(Run-game-images/forest1.gif) center no-repeat;
+    position: relative;
+    top: 25%;
+    left: 2.5%;
+    width: 87vh;
+}
+.container p{
+    display: none;
+}
+
+}
